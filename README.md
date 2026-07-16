@@ -138,14 +138,29 @@ Per-file breakdowns (train split, both languages have identical sentence counts 
 | `simple_wiki` | 642,588 | 17,270,682 | 12,585,806 |
 | `switchboard` | 30,559 | 279,445 | 197,183 |
 
+Per-file breakdowns (val split):
+
+| Source | Sentences | Hindi Words | Telugu Words |
+|---|---|---|---|
+| `bnc_spoken` | 128,792 | 1,396,256 | 913,908 |
+| `childes` | 519,283 | 3,720,466 | 2,465,403 |
+| `gutenberg` | 64,920 | 2,972,941 | 1,908,076 |
+| `open_subtitles` | 372,755 | 2,475,235 | 1,671,247 |
+| `simple_wiki` | 49,363 | 1,150,668 | 1,150,668 |
+| `switchboard` | 18,000 | 167,096 | 117,876 |
+
+Per-file breakdowns (test split):
+
+| Source | Sentences (Hindi) | Hindi Words | Sentences (Telugu) | Telugu Words |
+|---|---|---|---|---|
+| `bnc_spoken` | 89,313 | 1,043,064 | 89,313 | 679,491 |
+| `childes` | 538,980 | 3,591,627 | 538,980 | 2,389,689 |
+| `gutenberg` | 54,948 | 2,475,116 | 54,948 | 1,590,229 |
+| `open_subtitles` | 344,632 | 2,330,117 | 343,492 | 1,569,578 |
+| `simple_wiki` | 49,580 | 1,478,721 | 49,580 | 1,094,615 |
+| `switchboard` | 20,000 | 188,230 | 20,000 | 132,302 |
+
 Telugu words are consistently lower than Hindi for the same sentences — expected, since Telugu is agglutinative and tends to pack more morphemes per word than Hindi.
-
----
-
-## Known Issues
-
-- **Filename inconsistency:** some `val/` and `test/` files carry a redundant `.txt.train` fragment in their name (e.g. `val/childes.dev.txt.train.hi.txt` instead of `val/childes.dev.hi.txt`) — an artifact of an earlier translation run. Files are still correctly split by content; only the name is inconsistent.
-- **Mislabeled file:** `val/simple_wiki.dev.te.txt` in the **Hindi** dataset (`translated-babylm-hindi`) has a `.te.txt` (Telugu) extension and is byte-identical to the Telugu dataset's own `val/simple_wiki.dev.te.txt` — this file is Telugu content sitting in the Hindi repo's `val/` folder, not a genuine Hindi translation. Needs to be regenerated and re-uploaded.
 
 ---
 
