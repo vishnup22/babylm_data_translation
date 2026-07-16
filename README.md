@@ -32,7 +32,7 @@ Each split covers the same six sub-corpora:
 | Hindi | `hindi/train`, `hindi/val`, `hindi/test` |
 | Telugu | `telugu/train`, `telugu/val`, `telugu/test` |
 
-Anonymized view-only mirror (train + dev/val + test, produced by the scripts in this repo): **[osf.io/973gp](https://osf.io/973gp/?view_only=b255c4a0243341f498b6b243ddf528f6)**
+Data (train + dev/val + test, produced by the scripts in this repo): **[osf.io/973gp](https://osf.io/973gp/?view_only=b255c4a0243341f498b6b243ddf528f6)**
 
 - **Translation model:** [IndicTrans2 (`ai4bharat/indictrans2-en-indic-1B`)](https://huggingface.co/ai4bharat/indictrans2-en-indic-1B), a 1B-parameter open-source NMT model covering all 22 scheduled Indian languages.
 - **Direction:** `eng_Latn` → `hin_Deva` / `eng_Latn` → `tel_Telu`
